@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #DDDDDD;
+    --blank-space-color: #FFFFFF;
+}
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.calculator {
+    width: 500px;
+    height: 620px;
+    background-color: var(--blank-space-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+}
+.data_container{
+    width: 460px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: var(--blank-space-color);
+    border: solid 1px var(--primary-color);
+}
+.data_container:hover {
+    border: 1px solid #bbb;
+    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+.input{
+    text-align: right;
+    line-height: 80px;
+    width: 430px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
+    user-select: none;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    background-color: var(--blank-space-color);
+    width: 460px;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+.buttons > .button {
+    background-color: var(--blank-space-color);
+    width: 100px;
+    text-align: center;
+    border: solid 1px var(--primary-color);
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    user-select: none;
+}
+
+.buttons > .button:hover {
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #bbb;
+    cursor: pointer;
+  }
+.buttons > .button:active {
+    font-size: 32px;
+}
+.buttons > .nor {
+    height: 80px;
+    line-height: 80px;
+}
+.buttons > .long {
+    line-height: 380px;
+    background-color: #3F86FC;
+}
+.buttons > .long:hover {
+    background-color: #4D90FE;
+}
+.buttons > .equ {
+    grid-row: 2/6;
+    grid-column: 4;
+}
